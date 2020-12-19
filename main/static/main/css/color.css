@@ -1,0 +1,227 @@
+/***************************************************/
+/* this stylesheets for customize color */
+
+/***************************************************/
+
+
+/***************************************************/
+
+
+/* in the below, all selector has a default color red 
+when you want to customize the color, you just change the 
+velue of its and link that file on the html page */
+
+
+/***************************************************/
+
+
+#header .header-top-bar .header-login a:hover,
+#header .header-top-bar .header-social > li > a:hover,
+#header .header-top-bar .call-us a:hover,
+#header .header-nav-bar .navbar-nav li a:hover,
+#header .header-nav-bar .navbar-nav li.active a,
+#header .small-menu ul li a:hover,
+#footer .main-footer .footer-links a ,
+#footer .main-footer span,
+#footer .main-footer h5 span,
+#footer .main-footer .footer-links li a,
+#footer .footer-subscribe button[type="submit"],
+#footer .footer-copyright a,
+#main-wrapper .box-link figure figcaption a .fa,
+#main-wrapper .finding-social ul li a,
+#slide-content .item .details ul li a:hover,
+#main-wrapper .side-panel .sd-panel-heading h5:after,
+#main-wrapper .side-panel .sd-panel-heading ul li p .icon-link .fa,
+#main-wrapper .side-panel .sd-panel-heading ul li .price,
+#main-wrapper .side-panel .sd-panel-heading ul li .price-total,
+.toggle-main-title.active:after,
+.toggle-main-title .sd-panel-heading .toggle-title:after,
+.search-keyword button[type="submit"],
+#main-wrapper .category .toggle-content .toggle-title:before,
+#main-wrapper .category .toggle-content .toggle-title.active:before,
+#main-wrapper .my-check-right ul li p .icon-link .fa,
+#main-wrapper .my-check-right ul li .price,
+#main-wrapper .my-check-right ul li .price-total,
+#main-wrapper .mega-call-us .call-mega-us .fa,
+#main-wrapper .all-menu-details .details h6:hover a,
+#main-wrapper .all-menu-details .details .share-this ul li:hover a,
+#main-wrapper .all-menu-details .price-option button,
+#main-wrapper .all-menu-details .price-option button:before,
+#main-wrapper .all-menu-details .qty-cart button,
+#main-wrapper .all-menu-details .menu-with-details .qty-cart button,
+#main-wrapper .all-menu-details .single-menu .details h6:hover a,
+#main-wrapper .all-menu-details .single-menu .price-option button,
+#main-wrapper .all-menu-details .single-menu .price-option button:before,
+#main-wrapper .all-menu-details .single-menu .qty-cart button,
+#main-wrapper .all-menu-details .menu-without-side .price-option button,
+#main-wrapper .all-menu-details .menu-without-side .price-option button:before,
+#main-wrapper .all-menu-details .menu-without-side .qty-cart button,
+#main-wrapper .all-menu-details .dropdown-option .dropdown-details label .price,
+.page-content .chef-details .share-this ul li a:hover,
+.page-content .leave-reply form button,
+.page-content .our-team .share-this ul li a:hover,
+.page-content .contact-us .send-message form button,
+.page-content .news-events-blog .events-side-panel .search-keyword button[type="submit"],
+.select-box .fa,
+.page-content .reservation .reservation-form .select-box .fa,
+.page-content .reservation .reservation-form button,
+.page-content .news-events-blog .blog-side-panel .search-keyword button[type="submit"],
+.page-content .news-events-blog .blog-post .share-this ul li a:hover,
+.default-form .calendar-input .fa,
+.checkbox-input.active label:before,
+.act {
+
+  color: #e00000;
+
+}
+
+
+/***************************************************/
+
+/* for custom color tab */
+
+/***************************************************/
+
+
+.nav-tabs {
+  border-bottom: 3px solid #e00000;
+}
+
+.nav-tabs > li a:hover {
+  border-bottom-color: #e00000;
+}
+
+.nav-tabs > li a {
+  border: 1px solid #ccc;
+  border-bottom-color: #e00000;
+}
+
+
+
+/***************************************************/
+
+/* for custom border color */
+
+/***************************************************/
+
+.nav-tabs > li.active a:hover {
+  border: 1px solid #e00000;
+}
+
+.navbar-default .navbar-toggle {
+  border-color: #e00000;
+}
+
+
+
+.nav-tabs > li:hover a, .nav-tabs > li a.active:hover {
+  background-color: transparent;
+  border-bottom-color: #e00000;
+}
+
+
+/***************************************************/
+
+/* for change the background color */
+
+/***************************************************/
+
+.nav-tabs > li.active > a {
+  background: #e00000;
+  border: 1px solid #e00000;
+}
+
+.nav-tabs > li.active > a,
+ .nav-tabs > li.active > a:hover,
+  .nav-tabs > li.active > a:focus {
+  background: #e00000;
+  color: #fff;
+  border-color: #e00000;
+}
+
+
+#header .small-menu .choose-option ul li.active:after {
+  border-left: 13px solid #e00000;
+}
+
+
+
+/***************************************************/
+
+/* this section contains all the background color
+that are set default to red */
+
+/***************************************************/
+
+
+#header .small-menu .choose-option ul li.active,
+.call-to-action-section .icon,
+#main-wrapper .view-style .list-grid-view button.active,
+#main-wrapper .view-style .page-list ul li.active, 
+#main-wrapper .view-style .page-list ul li.active a,
+#main-wrapper .pagination ul li.active, 
+#main-wrapper .pagination ul li.active a,
+#main-wrapper .all-menu-details .price-option button.active,
+#main-wrapper .all-menu-details .menu-with-details .details h6:hover a,
+#main-wrapper .all-menu-details .menu-with-details .price-option button,
+#main-wrapper .all-menu-details .menu-with-details .price-option button:before,
+#main-wrapper .all-menu-details .menu-with-details .price-option button.active,
+#main-wrapper .all-menu-details .single-menu .price-option button.active,
+#main-wrapper .all-menu-details .menu-without-side .price-option button.active,
+.page-content .leave-reply form button:hover,
+.page-content .contact-us .send-message form button:hover,
+.page-content .reservation .reservation-form button:hover,
+.ui-datepicker-calendar td a:hover,
+.radio-input.active label:before {
+  
+  background: #e00000;
+}
+
+
+/***************************************************/
+
+/* some miscllenious default color */
+
+/***************************************************/
+
+
+.master-slider .ms-layer a:hover {
+  color: #e00000;
+  background: #fff;
+}
+
+#main-wrapper .box-link figure figcaption a {
+	border: 3px solid #e00000;
+}
+
+#main-wrapper .box-link figure figcaption a:hover {
+  background-color: #e00000; 
+  border: 3px solid #fff;
+  -webkit-box-shadow: 0 0 0 4px #e00000;
+  -moz-box-shadow: 0 0 0 4px #e00000;
+  -o-box-shadow: 0 0 0 4px #e00000;
+  box-shadow: 0 0 0 4px #e00000;
+}
+
+
+/***************************************************/
+
+/* border color defaults red */
+
+/***************************************************/
+
+#main-wrapper .all-menu-details .qty-cart button,
+#main-wrapper .all-menu-details .menu-with-details .qty-cart button,
+#main-wrapper .all-menu-details .single-menu .qty-cart button,
+#main-wrapper .all-menu-details .menu-without-side .qty-cart button,
+.page-content .leave-reply form button,
+.page-content .contact-us .send-message form button,
+.page-content .reservation .reservation-form button {
+	border: 1px solid #e00000;
+}
+
+/***************************************************/
+
+/* END */
+
+/***************************************************/

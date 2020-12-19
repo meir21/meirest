@@ -1,0 +1,191 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Home-landing</title>
+	<!-- Stylesheets -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/font-awesome.min.css' %}">
+	<link rel="stylesheet" href="{% static 'main/js/masterslider/style/masterslider.css' %}">
+	<link rel="stylesheet" href="{% static 'main/js/masterslider/skins/black-2/style.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/responsive.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/owl.theme.css' %}">
+	<link rel="stylesheet" href="{% static 'main/css/owl.carousel.css' %}">
+
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="main-wrapper">
+		<div class="container">
+			<div class="landing-logo">
+				<a href="index.html"><img src="{% static 'main/img/landing-logo.png' %}" alt=""></a>
+			</div>
+		</div>
+		<!-- all page-content start -->
+		<div id="page-content">
+			<!-- masterslider -->
+			<div class="master-slider landing ms-skin-black-2 round-skin" id="masterslider">
+				<!-- new slide -->
+				<div class="ms-slide">
+					<!-- slide background -->
+					<img src="{% static 'main/js/masterslider/blank.gif' %}" data-src="{% static 'main/img/content/landing-slide-img.jpg' %}" alt="">
+					<!-- slide text layer -->
+					<div class="ms-layer ms-caption">
+						<h4>Today's menu:</h4>
+						<p>Startesr:</p>
+						<p>Caprese con mozsiella di bufala - $5</p>
+
+						<p>Main course:</p>
+						<p>Melanzone alla permigiana - $19</p>
+
+						<p>Dessert:</p>
+						<p>Tiramisu - $3</p>
+
+						<a href="#" class="btn btn-landing"><i class="fa fa-list-ol"></i>Order Online</a>
+					</div>
+				</div>
+				<!-- end of slide -->
+
+				<!-- new slide -->
+				<div class="ms-slide">
+					<!-- slide background -->
+					<img src="{% static 'main/js/masterslider/blank.gif' %}" data-src="{% static 'main/img/content/landing-slide-img.jpg' %}" alt="">
+					<!-- slide text layer -->
+					<div class="ms-layer ms-caption" style="position:absolute; left: 159px; top:185px;">
+						<h4>Today's menu:</h4>
+						<p>Startesr:</p>
+						<p>Caprese con mozsiella di bufala - $5</p>
+
+						<p>Main course:</p>
+						<p>Melanzone alla permigiana - $19</p>
+
+						<p>Dessert:</p>
+						<p>Tiramisu - $3</p>
+
+						<a href="#" class="btn btn-landing"><i class="fa fa-list-ol"></i>Order Online</a>
+					</div>
+				</div>
+				<!-- end of slide -->
+
+				<!-- new slide -->
+				<div class="ms-slide">
+					<!-- slide background -->
+					<img src="{% static 'main/js/masterslider/blank.gif' %}" data-src="{% static 'main/img/content/landing-slide-img.jpg' %}" alt="">
+					<!-- slide text layer -->
+					<div class="ms-layer ms-caption" style="position:absolute; left: 159px; top:185px;">
+						<h4>Today's menu:</h4>
+						<p>Startesr:</p>
+						<p>Caprese con mozsiella di bufala - $5</p>
+
+						<p>Main course:</p>
+						<p>Melanzone alla permigiana - $19</p>
+
+						<p>Dessert:</p>
+						<p>Tiramisu - $3</p>
+
+						<a href="#" class="btn btn-landing"><i class="fa fa-list-ol"></i>Order Online</a>
+					</div>
+				</div>
+				<!-- end of slide -->
+			</div>
+			<!-- end of masterslider -->
+
+			<div class="welcome-msg">
+				<img src="{% static 'main/img/content/landing-cover.jpg' %}" alt="">
+				<h6>Hi! What it'll be for you?</h6>
+			</div>
+
+			<div class="landing-link">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="box-link">
+								<figure>
+									<img src="{% static 'main/img/content/order-online.jpg' %}" alt="">
+									<h4><a href="#">1. Order Online</a></h4>
+									<figcaption>
+										<a href="#"><i class="fa fa-laptop"></i></a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+
+						<div class="col-md-6">
+							<div class="box-link">
+								<figure>
+									<img src="{% static 'main/img/content/landing-about-us.jpg' %}" alt="">
+									<h4><a href="#">2. About Us</a></h4>
+									<figcaption>
+										<a href="#"><i class="fa fa-user"></i></a>
+									</figcaption>
+								</figure>
+							</div>
+						</div>
+					</div> <!-- end .row -->
+				</div> <!-- end .container -->
+			</div>
+
+			<div class="finding-social text-center">
+				<h6>Find Us On</h6>
+				<ul class="list-inline">
+				  <li><a href="#"><i class="fa fa-facebook-square"></i></a>
+				  </li>
+				  <li><a href="#"><i class="fa fa-twitter-square"></i></a>
+				  </li>
+				  <li><a href="#"><i class="fa fa-google-plus-square"></i></a>
+				  </li>
+				  <li><a href="#"><i class="fa fa-linkedin-square"></i></a>
+				  </li>
+				  <li><a href="#"><i class="fa fa-pinterest-square"></i></a>
+				  </li>
+				</ul>
+				<p>Copyright © 2014 UOU Apps</p>
+			</div>
+		</div> <!-- end .page-content -->
+	</div>
+	<!-- end #main-wrapper -->
+	<!-- Scripts -->
+	<!-- CDN jQuery -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<!-- Local jQuery -->
+	<script>
+	window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
+	</script>
+	<script src="{% static 'main/js/masterslider/masterslider.min.js' %}"></script>
+	<script src="{% static 'main/js/owl.carousel.js' %}"></script>
+	<script src="{% static 'main/js/bootstrap.js' %}"></script>
+
+
+
+	<script>
+
+		var slider = new MasterSlider();
+		slider.setup('masterslider', {
+			width: 1140,
+			height: 600,
+			space: 5,
+			fullwidth: true,
+			speed: 25,
+			view: 'flow',
+			centerControls: false
+		});
+		slider.control('bullets', {
+			autohide: false
+		});
+	</script>
+
+</body>
+
+</html>
