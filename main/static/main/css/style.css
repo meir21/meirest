@@ -976,8 +976,8 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 /* ====================================================== */
 #main-wrapper .landing-logo {
   position: absolute;
-  top: 30px;
-  left: 19%;
+  top: 65px;
+  left: 28%;
   z-index: 50;
 }
 
