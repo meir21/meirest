@@ -1,42 +1,37 @@
 {% extends 'main/base.html' %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block content %}
 
-<body>
+<div class="landing-link">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="box-link">
+					<figure>
+						<img src="{% static 'main/img/content/order-online.jpg' %}" alt="">
+						<h4><a href="#">1. Order Online</a></h4>
+						<figcaption>
+							<a href="#"><i class="fa fa-laptop"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
 
-	<!-- end #main-wrapper -->
-	<!-- Scripts -->
-	<!-- CDN jQuery -->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<!-- Local jQuery -->
-	<script>
-	window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')
-	</script>
-	<script src="{% static 'main/js/masterslider/masterslider.min.js' %}"></script>
-	<script src="{% static 'main/js/owl.carousel.js' %}"></script>
-	<script src="{% static 'main/js/bootstrap.js' %}"></script>
+			<div class="col-md-6">
+				<div class="box-link">
+					<figure>
+						<img src="{% static 'main/img/content/landing-about-us.jpg' %}" alt="">
+						<h4><a href="#">2. About Us</a></h4>
+						<figcaption>
+							<a href="#"><i class="fa fa-user"></i></a>
+						</figcaption>
+					</figure>
+				</div>
+			</div>
+		</div> <!-- end .row -->
+	</div> <!-- end .container -->
+</div>
 
 
-
-	<script>
-
-		var slider = new MasterSlider();
-		slider.setup('masterslider', {
-			width: 1140,
-			height: 600,
-			space: 5,
-			fullwidth: true,
-			speed: 25,
-			view: 'flow',
-			centerControls: false
-		});
-		slider.control('bullets', {
-			autohide: false
-		});
-	</script>
-
-</body>
-
-</html>
+{% endblock %}

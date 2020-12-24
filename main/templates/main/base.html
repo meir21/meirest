@@ -1,6 +1,5 @@
 {% load static %}
 
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -31,6 +30,9 @@
         <header id="header">
 			<div class="header-top-bar">
 				<div class="container">
+					<div class="landing-logo">
+						<a href="/"><img src="{% static 'main/img/header-logo.png' %}" alt=""></a>
+					</div>
 					<div class="row">
 						<div class="col-md-5 col-sm-12 col-xs-12">
 							<div class="header-login">
@@ -84,15 +86,10 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="index.html">Home-1</a></li>
-										<li><a href="index-landingpage.html">Home landing</a></li>
-									</ul>
+								<li><a href="/">Home</a>
 								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu Card <span class="caret"></span></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<span class="caret"></span></a>
 									<ul class="dropdown-menu" role="menu">
 										<li><a href="menu(view-1).html">Menu( view-1 )</a></li>
 										<li><a href="menu(view-2).html">Menu( view-2 )</a></li>
@@ -105,25 +102,15 @@
 										<li><a href="shortcodes.html">Shortcodes</a></li>
 									</ul>
 								</li>
-								<li><a href="chef.html">Chef</a>
-								</li>
-								<li><a href="our-team.html">Team</a>
-								</li>
 								<li class="dropdown">
-									<a href="#" class="dropdown-toggle act" data-toggle="dropdown">Blog <span class="caret"></span></a>
+									<a href="#" class="dropdown-toggle" data-toggle="dropdown">Branches<span class="caret"></span></a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="blog-list.html">Blog List</a></li>
-										<li><a href="blog-post.html">Blog Post</a></li>
+										{% for branch in branches %}
+											<li><a href="#">{{ branch.name }}</a></li>
+										{% endfor %}
 									</ul>
 								</li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">News & Events <span class="caret"></span></a>
-									<ul class="dropdown-menu" role="menu">
-										<li><a href="news-events.html">News & Events list</a></li>
-										<li><a href="event-page.html">News & Events post</a></li>
-									</ul>
-								</li>
-								<li><a href="about.html">Contact us</a>
+								<li><a href='{% url "main:aboutpage" %}' >About us</a>
 								</li>
 							</ul>
 						</div>
@@ -134,61 +121,18 @@
 			</div>
 			<!-- end .header-nav-bar -->
 			<!-- small menu section -->
-			<div class="small-menu">
-				<div class="container">
-					<ul class="list-unstyled list-inline">
-						<li><a href="index.html">Home</a>
-						</li>
-						<li><i class="fa fa-chevron-right"></i>
-						</li>
-						<li><a href="blog-list.html">Blog</a>
-						</li>
-					</ul>
-				</div>
-				<!-- end .container-->
-			</div>
 			<!--end .small-menu -->
 		</header>
 		<!-- end #header -->
 
-		<div class="container">
-			<div class="landing-logo">
-				<a href="index.html"><img src="{% static 'main/img/header-logo.png' %}" alt=""></a>
-			</div>
-		</div>
 		<!-- all page-content start -->
-			<div class="landing-link">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6">
-							<div class="box-link">
-								<figure>
-									<img src="{% static 'main/img/content/order-online.jpg' %}" alt="">
-									<h4><a href="#">1. Order Online</a></h4>
-									<figcaption>
-										<a href="#"><i class="fa fa-laptop"></i></a>
-									</figcaption>
-								</figure>
-							</div>
-						</div>
+		{% block content%}
 
-						<div class="col-md-6">
-							<div class="box-link">
-								<figure>
-									<img src="{% static 'main/img/content/landing-about-us.jpg' %}" alt="">
-									<h4><a href="#">2. About Us</a></h4>
-									<figcaption>
-										<a href="#"><i class="fa fa-user"></i></a>
-									</figcaption>
-								</figure>
-							</div>
-						</div>
-					</div> <!-- end .row -->
-				</div> <!-- end .container -->
-			</div>
+		{% endblock %}
 
 		</div> <!-- end .page-content -->
-	</div>
+
+
 	<!-- end #main-wrapper -->
 	<!-- Scripts -->
 	<!-- CDN jQuery -->
