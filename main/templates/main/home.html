@@ -1,6 +1,8 @@
 {% extends 'main/base.html' %}
 {% load static %}
-
+{% block title %}
+    Home
+{% endblock %}
 {% block content %}
 
 <div class="landing-link">
@@ -10,9 +12,9 @@
 				<div class="box-link">
 					<figure>
 						<img src="{% static 'main/img/content/order-online.jpg' %}" alt="">
-						<h4><a href="#">1. Order Online</a></h4>
+						<h4><a href='{% url "main:order" %}'>1. Order Online</a></h4>
 						<figcaption>
-							<a href="#"><i class="fa fa-laptop"></i></a>
+							<a href='{% url "main:order" %}'><i class="fa fa-laptop"></i></a>
 						</figcaption>
 					</figure>
 				</div>
@@ -22,9 +24,9 @@
 				<div class="box-link">
 					<figure>
 						<img src="{% static 'main/img/content/landing-about-us.jpg' %}" alt="">
-						<h4><a href="#">2. About Us</a></h4>
+						<h4><a href='{% url "main:about" %}'>2. About Us</a></h4>
 						<figcaption>
-							<a href="#"><i class="fa fa-user"></i></a>
+							<a href='{% url "main:about" %}'><i class="fa fa-user"></i></a>
 						</figcaption>
 					</figure>
 				</div>
@@ -35,3 +37,6 @@
 
 
 {% endblock %}
+
+
+

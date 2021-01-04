@@ -1,0 +1,46 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+    Login
+{% endblock %}
+
+{% block content %}
+        <br>
+        <br>
+        <br>
+        <body class="text-center">
+            <form class="form-signin" method="POST">
+                {% csrf_token %}
+                <img class="rounded" src="{% static 'main/img/landing-logo.png' %}" alt="">
+                <br>
+                <br>
+
+                <h1 class="h2 mb-2 font-weight-normal">
+                    Please sign in
+                </h1>
+
+                <div class="container">
+                <label for="inputUsername" class="sr-only">
+                    User Name
+                </label>
+                <input type="text" id="inputUsername" class="form-control" placeholder="User Name" name="username" required autofocus>
+                <br>
+                <label for="inputPassword" class="sr-only">
+                    Password
+                </label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="password" required>
+                <br>
+                </div>
+                <button class="btn btn-lg btn-primary" type="submit">Sign in</button>
+                <br>
+                <br>
+                <div class="checkbox mb-3">
+                    <h6>Dont Have an account? </h6>
+                    <a class="btn btn-success" href="{% url 'main:register' %}">Register</a>
+                </div>
+
+
+            </form>
+        </body>
+
+{% endblock %}

@@ -6,7 +6,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Home-landing</title>
+	<title>
+		{% block title %}
+
+		{% endblock %}
+	</title>
 	<!-- Stylesheets -->
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Nothing+You+Could+Do' rel='stylesheet' type='text/css'>
@@ -36,8 +40,13 @@
 					<div class="row">
 						<div class="col-md-5 col-sm-12 col-xs-12">
 							<div class="header-login">
-								<a href="#">Order online</a>
-								<a href="#">Login</a>
+								{% if user.is_authenticated %}
+									<a href="#">Logged in as {{ user.username }}</a>
+									<a href='{% url "main:logout" %}'>Logout</a>
+								{% else %}
+									<a href='{% url "main:login" %}'>Login</a>
+									<a href='{% url "main:register" %}'>Register</a>
+								{% endif %}
 							</div>
 							<!-- end .header-login -->
 							<!-- Header Social -->
@@ -47,10 +56,6 @@
 								<li><a href="#"><i class="fa fa-twitter-square"></i></a>
 								</li>
 								<li><a href="#"><i class="fa fa-google-plus-square"></i></a>
-								</li>
-								<li><a href="#"><i class="fa fa-linkedin-square"></i></a>
-								</li>
-								<li><a href="#"><i class="fa fa-pinterest-square"></i></a>
 								</li>
 							</ul>
 						</div>
@@ -110,7 +115,7 @@
 										{% endfor %}
 									</ul>
 								</li>
-								<li><a href='{% url "main:aboutpage" %}' >About us</a>
+								<li><a href='{% url "main:about" %}' >About us</a>
 								</li>
 							</ul>
 						</div>
@@ -165,5 +170,11 @@
 	</script>
 
 </body>
+<style>
+	body {
+	background-color: #212121;
+	color: white
+	}
+</style>
 
 </html>
