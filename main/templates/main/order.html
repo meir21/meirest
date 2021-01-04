@@ -6,16 +6,16 @@
 
 {% block content %}
 
-  {% include 'main/includes/select_branch_modal.html'%}
-<div class="container">
 
+<div class="container">
   <div class="row mt30">
     <div class="col-md-12">
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab-1">
           <div class="all-menu-details">
-            <h5>Daily Menu</h5>
-            <div class="single-menu">
+            <h4>Daily Menu</h4>
+            {% for dish in dishes %}
+              <div class="single-menu">
               <div class="list-image">
                 <img src={{ dish.image_url }} alt="">
               </div>
@@ -23,16 +23,12 @@
                 <div class="visible-option">
                   <div class="details">
                     <h6><a href="#">{{ dish.name }}</a>
-                    </h6>
-
-
+                    </h6><br>
                     <p><strong>Description:</strong>
                       {{ dish.description }}</p>
-
                   </div>
-
                   <div class="price-option">
-                    <h4>$ {{ dish.price }}</h4>
+                    <h4>$ {{ dish.price|floatformat:2 }}</h4>
                     <button class="toggle">Option</button>
                   </div>
                   <!-- end .price-option-->
@@ -46,30 +42,18 @@
                   </div>
                 </div>
                 <!-- end .qty-cart -->
-
                 <div class="dropdown-option clearfix">
                   <div class="dropdown-details">
                     <form class="default-form">
                       <h6>Extras</h6>
-                      <span class="checkbox-input">
-                        <input type="checkbox" id="shrimps-1">
-                        <label for="shrimps-1">Double Shrimps<i class="fa fa-plus price">$3.00</i>
-                        </label>
-                      </span>
-
-                      <span class="checkbox-input">
-                        <input type="checkbox" id="extra-veggies-1">
-                        <label for="extra-veggies-1">Extra Veggies <i class="fa fa-plus price">$3.00</i>
-                        </label>
-                      </span>
-
-                      <span class="checkbox-input">
-                        <input type="checkbox" id="additional-butter-1">
-                        <label for="additional-butter-1">Additional Butter <i class="fa fa-plus price">$3.00</i>
-                        </label>
-                      </span>
-
-                      <h6>Additional Notes</h6>
+                      {% for topping in dish.toppings.all %}
+                        <span class="checkbox-input">
+                          <input type="checkbox" id="{{ topping.id }}">
+                          <label for="{{ topping.id }}">{{ topping.name }}<i class="fa fa-plus price"> $ {{ topping.price|floatformat:2 }}</i>
+                          </label>
+                        </span>
+                      {% endfor %}
+                      <h6>Total Price</h6>
                       <textarea placeholder="Write here"></textarea>
 
                       <a class="btn btn-default-red">Confirm</a>
@@ -82,13 +66,9 @@
               </div>
               <!-- end .all-details -->
             </div> <!-- end .single-menu -->
+            {% endfor %}
           </div> <!-- end .all-menu-details -->
         </div> <!-- end .tab-pane -->
-
-
-        <div class="tab-pane fade" id="tab-2">
-          <p><strong>Description:</strong><br>Phasellus ornare, ante vitae consectetuer consequat, purus sapien ultricies dolor, et mollis pede metus eget nisi. Praesent sodales velit quis augue.</p>
-        </div> <!-- end .tab-pane  -->
       </div> <!-- end .tab-content -->
     </div>
     <!--end main-grid layout-->

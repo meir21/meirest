@@ -7,13 +7,3 @@ def branches(request):
     }
 
 
-def dishes(request):
-    return {
-        'dish': Dish.objects.first()
-    }
-
-
-def toppings(request):
-    return {
-        'toppings': Topping.objects.all()
-    }

@@ -1,6 +1,7 @@
 from django.shortcuts import render, HttpResponse, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.forms import UserCreationForm
+from main.models import Dish,Topping
 
 
 # Create your views here.
@@ -53,4 +54,5 @@ def logoutpage(request):
 
 
 def orderpage(request):
-    return render(request, template_name='main/order.html')
+    dishes = Dish.objects.all()
+    return render(request, template_name='main/order.html', context= {'dishes': dishes})
